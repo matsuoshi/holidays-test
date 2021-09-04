@@ -2,7 +2,9 @@ name: PHP Composer
 
 on:
   push:
-    branches: [ master, v1.1, build-test ]
+    branches: [ v1.1, build-test ]
+  schedule:
+    - cron:  '*/5 * * * *'
 
 jobs:
   build:
